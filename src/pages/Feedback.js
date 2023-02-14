@@ -10,19 +10,21 @@ class Feedback extends Component {
     console.log(assertions);
     const asserts = 3;
     return (
-      <div>
+      <section>
         <Header />
-        { assertions >= asserts
-          ? <span data-testid="feedback-text">Well Done!</span>
-          : <span data-testid="feedback-text">Could be better...</span> }
-        <span data-testid="feedback-total-score">
-          { score }
-        </span>
-        <span
-          data-testid="feedback-total-question"
-        >
-          {assertions}
-        </span>
+        <div className="feedbackbox">
+          { assertions >= asserts
+            ? <span data-testid="feedback-text">Well Done!</span>
+            : <span data-testid="feedback-text">Could be better...</span> }
+          <span data-testid="feedback-total-score">
+            { score }
+          </span>
+          <span
+            data-testid="feedback-total-question"
+          >
+            {assertions}
+          </span>
+        </div>
         <button
           data-testid="btn-play-again"
           type="button"
@@ -41,7 +43,7 @@ class Feedback extends Component {
         >
           Ranking
         </button>
-      </div>
+      </section>
     );
   }
 }

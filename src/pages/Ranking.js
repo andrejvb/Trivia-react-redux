@@ -33,32 +33,36 @@ class Ranking extends Component {
     const { history } = this.props;
     history.push('/');
   };
-
+  
   render() {
     const { players } = this.state;
     return (
-      <div>
-        <h2 data-testid="ranking-title">Ranking</h2>
-        {
-          players.sort((a, b) => b.score - a.score).map((player, index) => {
-            console.log('');
-            return (
-              <div key={ player.name }>
-                <img src={ player.image } alt="" />
-                <h2
-                  data-testid={ `player-name-${index}` }
-                >
-                  {player.name}
-                </h2>
-                <p
-                  data-testid={ `player-score-${index}` }
-                >
-                  {player.score}
-                </p>
-              </div>
-            );
-          })
-        }
+      <div className="page-ranking">
+        <div className="card-ranking">
+          <div className="inputs-ranking">
+            <h2 data-testid="ranking-title">Ranking</h2>
+            {
+              players.sort((a, b) => b.score - a.score).map((player, index) => {
+                console.log('');
+                return (
+                  <div key={ player.name }>
+                    <img src={ player.image } alt="" />
+                    <h2
+                      data-testid={ `player-name-${index}` }
+                    >
+                      {player.name}
+                    </h2>
+                    <p
+                      data-testid={ `player-score-${index}` }
+                    >
+                      {player.score}
+                    </p>
+                  </div>
+                );
+              })
+            }
+          </div>
+        </div>
         <button
           type="button"
           data-testid="btn-go-home"
