@@ -18,13 +18,12 @@ export default class Settings extends Component {
           className="mt-10 ml-24 text-[36px]
          font-bold text-stone-500"
         >
-          Configuracoes
-
+          Configuraćões
         </h2>
         <img
           src="https://davesamaniego2016.files.wordpress.com/2016/10/cat-catstruction-play-on-words-construction-cats-favim-com-4174852.jpeg"
           alt=""
-          className="w-[400px] m-auto mt-4"
+          className="w-[400px] m-auto mt-4 rounded-[30px]"
         />
         <button type="button" onClick={ () => { this.props.history.push('/'); } } className={ this.buttonStyleStandard }>Voltar</button>
 
