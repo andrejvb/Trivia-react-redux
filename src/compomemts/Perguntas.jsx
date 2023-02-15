@@ -47,10 +47,10 @@ class Perguntas extends Component {
           t-8
           "
         >
-          <p className="mr-2 text-center">
+          <p className="mr-2 text-center text-[20px]">
             Tempo:
           </p>
-          <p className="text-center">
+          <p className="text-center text-[20px]">
             {seconds}
           </p>
         </div>

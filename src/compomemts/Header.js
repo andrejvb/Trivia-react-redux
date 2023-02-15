@@ -9,7 +9,7 @@ class Header extends Component {
     const hast = md5(gravatarEmail).toString();
     const src = `https://www.gravatar.com/avatar/${hast}`;
     return (
-      <header className="grid grid-cols-12 grid-rows-1 bg-white h-32 mb-32">
+      <header className="grid grid-cols-12 grid-rows-1 bg-white h-32 mb-32 w-screen">
         <img
           src="https://imgur.com/liyWz8F.png"
           className="col-span-7 place-self-center mt-32 z-10 drop-shadow-lg h-56"
